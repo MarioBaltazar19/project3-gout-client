@@ -1,0 +1,476 @@
+body {
+  margin: 0;
+}
+
+a {
+  list-style: none;
+  color: black;
+}
+
+button,
+select {
+  padding: 5px 10px;
+  min-width: 50px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+label {
+  width: 200px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 200px;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+nav li {
+  list-style: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card {
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #94a7c8;
+  border-radius: 4px;
+}
+
+.ProjectCard h3::after {
+  content: url("https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/icon-expand.png");
+  margin-left: 5px;
+}
+
+.EditProjectPage,
+.AddProject,
+.AddTask,
+.SignupPage,
+.LoginPage {
+  background: #f9eec3;
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.EditProjectPage {
+  background-color: rgb(239, 196, 88);
+}
+
+.SignupPage,
+.LoginPage {
+  background-color: #242424;
+  color: white;
+  width: 100%;
+}
+
+.LoginPage {
+  background-color: #242424;
+  color: white;
+}
+
+.EditProjectPage form,
+.AddTask form,
+.AddProject form,
+.SignupPage form,
+.LoginPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AddTask button,
+.AddProject button {
+  display: block;
+}
+
+.TaskCard {
+  background-color: #dfeef9;
+}
+
+.card .card-body {
+  padding: 0;
+  text-align: center;
+}
+
+#root .navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #f8f9fa2e;
+
+  padding: 5px;
+  background-color: #fbfbfb;
+  color: #000000;
+}
+
+.artistCard a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.artistsListPage {
+  text-align: center;
+}
+
+.artistCard img {
+  max-width: 90%;
+  border-radius: 200px;
+}
+
+.artistCard.card {
+  border-radius: 100px;
+  border-color: rgb(7 138 247 / 77%);
+  border: 3px solid #ced4da;
+}
+
+.artistsListPage {
+  background-color: black;
+  color: white;
+}
+
+.Profile {
+  text-align: center;
+}
+
+.container.py-5.h-100 {
+  background-color: #212529;
+}
+
+.genreCard.card {
+  border-radius: 150px;
+}
+
+.justify-content-end.flex-grow-1.pe-3.navbar-nav {
+  font-size: 28px;
+}
+
+a.nav-link {
+  border: 1px solid grey;
+  border-radius: 50px;
+}
+
+.offcanvas-body {
+  background-color: #212529;
+}
+
+.offcanvas-header {
+  background-color: #212529;
+}
+
+a.nav-link {
+  background-color: ghostwhite;
+}
+
+.EventCard img {
+  max-width: 300px;
+}
+
+.EventCard.card {
+  align-items: center;
+  text-align: center;
+  border-radius: 100px;
+  border: 3px solid #ced4da;
+}
+
+.EventsListPage h1 {
+  text-align: center;
+}
+
+.artistCard.card {
+  color: black;
+  align-items: center;
+}
+
+.EventsListPage {
+  background-color: black;
+}
+
+.EventsListPage h1 {
+  text-align: center;
+  color: white;
+}
+
+button.btn.btn-primary {
+  background-color: white;
+  color: black;
+  font-size: large;
+  font-weight: bolder;
+}
+
+#root .navbar-dark .navbar-toggler-icon {
+  background-image: blue;
+}
+
+button.btn-close {
+  border: 2px solid;
+  background-color: #fbfbfb;
+}
+
+.EventCard img {
+  max-width: 95%;
+  border-radius: 20px;
+}
+
+.EventsListPage button.btn.btn-primary {
+  border: 2px solid #ced4da;
+}
+
+.buttonAdd {
+  display: flex;
+  justify-content: center;
+}
+
+.EventCard a {
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttonAdd button.btn.btn-primary {
+  border: 2px solid #ced4da;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+img.spotlogo {
+  width: 25px;
+}
+
+.artistCard h5 {
+  display: flex;
+  justify-content: center;
+}
+
+.d-flex {
+  display: flex !important;
+  flex-direction: row;
+}
+
+input.me-2.form-control {
+  width: 70%;
+}
+
+form.d-flex {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  border: none;
+}
+
+button.btn.btn-outline-success {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.back {
+  background-color: black;
+}
+
+.carousel-indicators {
+  display: none !important;
+}
+
+.EventsListPage {
+  padding-bottom: 20px;
+}
+
+.artistsListPage {
+  padding-bottom: 20px;
+}
+
+#root .navbar-dark .navbar-toggler-icon {
+  background-image: blue !important;
+}
+
+.buttonAdd button.btn.btn-primary {
+  border: 2px solid #ced4da;
+  border-radius: 35px;
+}
+
+.container-fluid img {
+  width: 150px;
+  position: relative;
+  right: 35px;
+}
+
+button.btn-close {
+  position: relative;
+  right: -280px;
+}
+
+.justify-content-end.flex-grow-1.pe-3.navbar-nav {
+  position: relative;
+  left: 10px;
+}
+
+.EventCard img {
+  max-width: 95%;
+  border-radius: 20px;
+  padding: 3px;
+  border: 2px solid orangered;
+}
+
+.artistCard .profileImg {
+  max-width: 90%;
+  border-radius: 200px;
+  border: 2px solid orangered;
+  padding: 5px;
+}
+
+.artistCard img .spotlogo {
+  border: none;
+  padding: none;
+}
+
+button.btn.btn {
+  border: 2px solid orangered;
+  padding: 5px;
+  color: white;
+  background-color: black;
+}
+
+input.me-2.form-control {
+  border: 2px solid orangered;
+  background-color: black;
+  color: white;
+}
+
+a.nav-link {
+  border: 2px solid orangered;
+  background-color: black;
+  color: white;
+}
+
+.btnHome {
+  background-color: black;
+}
+
+.btnHome {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.offcanvas-body {
+  background-color: black;
+}
+
+.offcanvas-header {
+  background-color: black;
+}
+
+a.nav-link {
+  font-size: 24px;
+}
+
+.createEvent.container-fluid {
+  background-color: black;
+  color: white;
+  padding-bottom: 550px;
+}
+
+.btn-primary {
+  box-shadow: none;
+}
+
+.createTitle {
+  text-align: center;
+}
+
+.createTitle h1 {
+  color: orangered;
+}
+
+element.style {
+  background-color: rgb(0, 0, 0);
+  height: 200px;
+  border: 2px solid orangered;
+}
+
+.container.py-5.h-100 {
+  background-color: black;
+}
+
+.artistCard .profImg {
+  max-width: 90%;
+  border-radius: 200px;
+  border: 2px solid orangered;
+  padding: 5px;
+}
+
+.genreCard.card {
+  border: 2px solid orangered;
+  padding: 5px;
+}
+
+h3 {
+  color: black;
+}
+
+h5 {
+  color: black;
+}
+
+img.img-fluid.mt-4.mb-2.img-thumbnail {
+  border: 3px solid orangered !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  background-color: black !important;
+}
+
+.EventCard.card {
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  border: 3px solid #ced4da;
+}
+
+.container-fluid img {
+  width: 150px;
+  position: relative;
+  right: 42px;
+}
+
+.accordion-button {
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid orangered !important;
+}
+
+.accordion-body {
+  background-color: black !important;
+  color: white !important;
+}
+
+.accordion-item {
+  background-color: black !important;
+}
