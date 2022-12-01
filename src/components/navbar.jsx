@@ -91,7 +91,7 @@ function OffcanvasExample() {
                       </Link>
                       <br />
 
-                      <Link
+                      {/* <Link
                         className="nav-link"
                         to="/help"
                         onClick={() =>
@@ -101,18 +101,17 @@ function OffcanvasExample() {
                         }
                       >
                         Help
-                      </Link>
-
-                      <br />
+                      </Link> */}
 
                       <Link
                         className="nav-link"
-                        to="/myevents"
-                        onClick={() =>
+                        onClick={logout}
+                        
+                        /* onClick={() =>
                           document
                             .querySelector(".offcanvas-collapse")
                             .classList.remove("show")
-                        }
+                        } */
                       >
                         Logout
                       </Link>

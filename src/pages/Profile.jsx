@@ -38,7 +38,7 @@ function Profile() {
                 <div className="d-flex justify-content-between align-items-center mb-4">
                   <MDBCardText className="lead fw-normal mb-0">Favourite Events</MDBCardText>
                 </div>
-                <Carousel bg="dark">
+                <Carousel bg="dark" w="100">
       <Carousel.Item>
         <img
           className="d-block w-100"

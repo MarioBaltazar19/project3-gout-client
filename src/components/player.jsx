@@ -1,25 +1,11 @@
-import SpotifyPlayer from 'react-spotify-player';
+import React from 'react';
+import { ElfsightWidget } from 'react-elfsight-widget';
 
+function Player() {
+  return <ElfsightWidget widgetID="48718a2e-ba8a-409c-be8b-cd68b2dbcf1c" />;
+}
 
-  const size = {
-    width: '100%',
-    height: 300,
-  };
-    
-    const view = 'list';
-    const theme = 'black';
+export default Player
 
-  function SpotifyPlayer() {
-    return (
-        <SpotifyPlayer
-        uri="spotify:album:3SpBlxme9WbeQdI9kx7KAV"
-        size={size}
-        view={view}
-        theme={theme}
-      />
-    );
-  }
-  
-  export default SpotifyPlayer;
 
 

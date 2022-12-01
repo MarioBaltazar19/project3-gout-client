@@ -41,12 +41,12 @@ function Homeartists() {
       
       
       
-      <h1>Artists</h1>
+      <h1 className="artTit">Artists</h1>
       <br />
 
       
 
-      {artists.slice(0, 5).map((artist) => {
+      {artists.slice(0, 6).map((artist) => {
         return (
           <div key={artist._id} className="artistCard card">
             <Link to={`/artists/${artist._id}`}>
@@ -57,23 +57,29 @@ function Homeartists() {
               
               <h5><img className="spotlogo" src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" alt="" />   Followers </h5>
               {artist.followers}
-              <br />
+            </Link>
               <br />
 
-              <h2> Next Events </h2>
+              <br />
+
             
-              {artist.events.slice(0,2).map((artist) =>{
+              <h2> Next Events </h2>
+              <div className="eventNext">
+              {artist.events.slice(0,2).map((event) =>{
                 return (
-                  <h4>{artist.title}</h4>
+                  <Link to={`/events/${event._id}`}>
+                  <h4 className="Eventitle">{event.title}</h4>
+                  </Link>
                 )
               })}
+              </div>
 
               <br />
               <br />
 
               
               
-            </Link>
+            
           </div>
         );
       })}

@@ -36,35 +36,44 @@ function Artists() {
   }, []);
 
   return (
-    <SearchBar/>,
-    <div className="artistsListPage">
-      <br />
-      <h1>List of Artists:</h1>
+    (<SearchBar />),
+    (
+      <div className="artistsListPage">
+        <br />
+        <br />
+        
 
-      {artists.map((artist) => {
-        return (
-          <div key={artist._id} className="artistCard card">
-            <Link to={`/artists/${artist._id}`}>
-              <h3>{artist.name}</h3>
-              <img className="profImg" src={artist.profileimage}></img>
-              <br />
-              <br />
-              <h5><img className="spotlogo" src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" alt="" />   Followers </h5>
-              {artist.followers}
-              <br />
-              <br />
-              <h3> Genres </h3>
-              {artist.genre.slice(0, 2).map((genre) => {
-                return (
-                  <div key={genre._id} className="genreCard card">
-                    <Link to={`/genre/${genre._id}`}>
-                      <h3>{genre}</h3>
-                    </Link>
-                  </div>
-                );
-              })}
+        {artists.map((artist) => {
+          return (
+            <div key={artist._id} className="artistCard card">
+              <Link to={`/artists/${artist._id}`}>
+                <h3>{artist.name}</h3>
+                <img className="profImg" src={artist.profileimage}></img>
+                <br />
+                <br />
+                <h5>
+                  <img
+                    className="spotlogo"
+                    src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png"
+                    alt=""
+                  />{" "}
+                  Followers{" "}
+                </h5>
+                {artist.followers}
+                <br />
+                <br />
+                <h3> Next Events </h3>
+                {artist.genre.slice(0, 1).map((genre) => {
+                  return (
+                    <div key={genre._id} className="genreCard card">
+                      {artist.events.slice(0, 1).map((artist) => {
+                        return <h4>{artist.title}</h4>;
+                      })}
+                    </div>
+                  );
+                })}
 
-              {/* {artist.genre.slice(0, 2).map((genre) => {
+                {/* {artist.genre.slice(0, 2).map((genre) => {
                 return (
                   <div key={Event._id} className="genreCard card">
                     <Link to={`/genre/${genre._id}`}>
@@ -74,13 +83,14 @@ function Artists() {
                 );
               })} */}
 
-              <br />
-              <br />
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+                <br />
+                <br />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    )
   );
 }
 

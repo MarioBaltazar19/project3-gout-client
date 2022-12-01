@@ -4,6 +4,7 @@ import ArtistsCarousel from "../components/artistsCarousel";
 import EventsList from "../components/events";
 import SearchBar from "../components/searchbar";
 import { Link } from "react-router-dom";
+import CarouselDesktop from "../components/carouselDesktop";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <SearchBar />
         <br />
       </div>
+      <CarouselDesktop />, 
       <ArtistsCarousel />
       <EventsList />
       

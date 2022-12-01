@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 function EventsList() {
   //declare the state
   const [events, setEvents] = useState([]);
+  const [artist, setArtist] = useState([]);
+  const [artists, setArtists] = useState([]);
   //function to call the API
 
   const getEvents = async () => {
@@ -33,7 +35,7 @@ function EventsList() {
   }, []);
 
   return (
-    <div className="EventsListPage">
+    <div className="EventsListPageH1">
       <br />
       <h1>Events</h1>
       <br />
@@ -45,39 +47,49 @@ function EventsList() {
         </Link>
       </div>
 
-      {events.slice(0, 10).map((event) => {
-        return (
-          <div key={event._id} className="EventCard card">
-            <br />
-            <Link to={`/events/${event._id}`}>
-              <h2>{event.title}</h2>
+      <div className="EventsListPage">
+        {events.slice(0, 9).map((event) => {
+          return (
+            <div key={event._id} className="EventCard card">
               <br />
-              {<img src={event.image}></img>}
-              {/* <img src="https://cdn.boomfestival.org/assets/files/5903/46_bf22_jakob_kolar_img_2739.1280x614.jpg"></img> */}
-              <br />
-              <br />
-              <h4>{event.date.toLocaleString().slice(0, 10)}</h4>
-              <h5>{event.location}</h5>
-              {/* <h5>{event.creator}</h5> */}
-              <br />
-              <h6>{event.genre}</h6>
-              <br />
-              <h6>Artists:</h6>
-              {event.artists.length && (
-                <>
-                  <h6>{event.artists[0].name}</h6>
-                  <br />
-                </>
-              )}
+              <Link to={`/events/${event._id}`}>
+                <h2>{event.title}</h2>
+                <br />
+                {<img src={event.image}></img>}
+                {/* <img src="https://cdn.boomfestival.org/assets/files/5903/46_bf22_jakob_kolar_img_2739.1280x614.jpg"></img> */}
+                <br />
+                <br />
+                <h4>{event.date.toLocaleString().slice(0, 10)}</h4>
+                <h5>{event.location}</h5>
+                {/* <h5>{event.creator}</h5> */}
+                <br />
+                <h6>{event.genre}</h6>
+                <br />
+                <h6>Artists:</h6>
 
-              <h6>{event.description}</h6>
+                {event.artists.map(artist =>{
+            return(
+              <Link to={`/artists/${artist._id}`}>
+                    <>
+                      <h4 className="artNam">{artist.name}</h4>
+                      <br />
+                    </>
+                  </Link>
+              
+              
+            )
+          })} 
+
+
+                <h6>{event.description}</h6>
+                <br />
+              </Link>
               <br />
-            </Link>
-            <br />
-            <br />
-          </div>
-        );
-      })}
+              <br />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

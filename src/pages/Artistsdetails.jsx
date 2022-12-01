@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import SpotifyPlayer from "react-spotify-web-playback";
+import Player from "../components/player";
 
 /* import SpotifyPlayer from 'react-spotify-player'; */
 
@@ -53,15 +53,23 @@ function ArtistsDetails() {
             <br />
             <br />
             <h5>
+              <a href={`https://open.spotify.com/artist/${artists._id}`} target="_blank"
+                  rel="noopener noreferrer">
               <img
                 className="spotlogo"
                 src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png"
                 alt=""
               />{" "}
+              </a>
               Followers{" "}
             </h5>
             {artists.followers}
-            <h1>{artists.genre}</h1>
+            
+            <br />
+            <br />
+
+            <h3>Genres</h3>
+            <h5>{artists.genre.slice(0, 2)}</h5>
             <br />
             <br />
             {/* <h3> Genres </h3>
@@ -74,9 +82,22 @@ function ArtistsDetails() {
                 </div>
               );
             })} */}
-            <h1>{artists.events[0].title}</h1>
-            {artists.events[1] && <h1>{artists.events[1].title}</h1>}
-            {/*    <h1>{events[1].title}</h1> */}
+
+            <h2>Next Events</h2>
+            <br />
+            {artists.genre.slice(0, 1).map((genre) => {
+                  return (
+                    <div key={genre._id} className="genreCard card">
+                      {artists.events.slice(0, 10).map((artist) => {
+                        return <h4>{artist.title}</h4>;
+                      })}
+                    </div>
+                  );
+                })}
+
+                <br />
+                <Player />
+                <br />
 
             {/* {artist.genre.slice(0, 2).map((genre) => {
           <div key={Event._id} className="genreCard card">
@@ -96,7 +117,12 @@ function ArtistsDetails() {
         } */}
 
             {/* <SpotifyPlayer/> */}
+
+            <div class=""></div>
+            
           </div>
+
+          
 
           {/* })} */}
         </div>

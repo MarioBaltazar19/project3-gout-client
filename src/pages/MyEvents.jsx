@@ -34,7 +34,8 @@ function MyEvents() {
   }, [user]);
 
   return (
-    <div className="EventsListPage">
+    <div className="EventsListPageH1">
+    
       <br />
       <h1>Events</h1>
       <br />
@@ -45,7 +46,7 @@ function MyEvents() {
           </button>
         </Link>
       </div>
-
+      <div className="EventsListPage">
       {events.slice(0, 10).map((event) => {
         return (
           <div key={event._id} className="EventCard card">
@@ -66,17 +67,46 @@ function MyEvents() {
             <h6>{event.description}</h6>
             <br />
             <Link to={`/addArtist/${event._id}`}>
-              <button type="button" className="btn btn-primary">
+              <button type="button" class="btn btn">
                 Add Artist +
               </button>
             </Link>
             <br />
+
+           
+            <Link to={`/event/update/${event._id}`}>
+              <button type="button" class="btn btn">
+                Edit Event 
+              </button>
+            </Link>
+            <br />
+
+
+            <button
+              type="button"
+              class="btn btn"
+              onClick={() => {
+                axios
+                  .delete(
+                    `${process.env.REACT_APP_API_URL}/event/delete/${event._id}`
+                  )
+                  .then((response) => {
+                    console.log(response);
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+              }}
+            >
+              Delete
+            </button>
             {/* </Link> */}
             <br />
             <br />
           </div>
         );
       })}
+    </div>
     </div>
   );
 }
