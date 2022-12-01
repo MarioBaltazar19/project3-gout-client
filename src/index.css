@@ -509,7 +509,6 @@
     color: white;
     background-color: black;
     border-radius: 15px;
-    width: 80%;
     position: relative;
     
   }
@@ -531,6 +530,8 @@
   .caroDesck {
     display: none;
   }
+
+  
 }
 
 @media only screen and (min-width: 768px) {

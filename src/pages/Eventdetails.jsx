@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import SearchBar from '../components/searchbar';
-import Player from '../components/player';
+import Icons from '../components/icons';
 
 function EventDetails() {
   const [Event, setEvent] = useState(null);
@@ -40,17 +40,19 @@ function EventDetails() {
           <p>{Event.description}</p>
           {Event.artists.map(artist =>{
             return(
+              <Link to={`/artists/${artist._id}`}>
               <>
               <p className="artNam2">{artist.name}</p>
               </>
+              </Link>
             )
           })} 
    
-
-        <Player/>
+          
+        
 
         <br />
-
+        <Icons />
     
         {/* <Link to={`/addArtist/${Event._id}`}>
         <button type="button" className="btn btn-primary">Add Artist + </button>
